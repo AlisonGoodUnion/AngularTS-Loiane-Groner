@@ -1,4 +1,10 @@
 <p>
- cursos component!
+  Lista de cursos do portal {{nomePortal}} <!--Acessando atributo via interpolation Ex: {{ Atributo do TS }}-->
 </p>
 <app-curso-detalhe></app-curso-detalhe><!--conteudo do selector do component-->
+
+<ul>
+  <li *ngFor="let curso of cursos"> <!--diretiva ng for let = ecma2015 *ngFor let of -->
+    {{curso}} <!--Utilizando interpolação para exibir valores da lista atravez do laço for.-->
+  </li>
+</ul>

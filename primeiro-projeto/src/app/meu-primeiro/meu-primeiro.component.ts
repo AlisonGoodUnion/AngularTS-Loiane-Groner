@@ -6,7 +6,7 @@ import { Component } from '@angular/core'; //package core do angular
   template: `
   <p>Meu primeiro component com angular2</p>
   ` //template literal utilizando acento crase
-}) // Funcionalidade do ECMA script2015
+}) // Funcionalidade do ECMA script2015 template inline so deve ser utilizado se o html for até 3 linhas
 export class MeuPrimeiroComponent {
 // necessario export na class para que seja possível expor a class para outros files
 // todo component diretive etc.. necessita ser declarado no app.module.ts
