@@ -5,8 +5,9 @@ import { CommonModule } from '@angular/common';// no module de funcionalidade se
 
 import { CursosComponent } from './cursos.component';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
+import {CursosService} from "./cursos.service";
 
-@NgModule({//ao criar um novo component dentro do curso, automaticamento já é declarado 
+@NgModule({//ao criar um novo component dentro do curso, automaticamento já é declarado
   //no seu ngmodule pai.
   declarations: [CursosComponent, CursoDetalheComponent], // aqui declaramos nosso component no module se faz necessario importar
   imports: [
@@ -14,7 +15,8 @@ import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
   ],
   exports: [ // com essa diretive é possivel disponibilizar nosso component para toda a aplicação
     CursosComponent
-  ]
+  ],
+  providers: [CursosService]
 })
 export class CursosModule { }
 // ng g m cursos comando para gerar novo module
