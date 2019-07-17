@@ -1,0 +1,22 @@
+<section class="property-binding">
+  <article>
+    <h3>Interpolation / Interpolação: valor do component para o template</h3>
+    <p>String renderizada com interpolação: {{ url }}</p> <!-- Variavel na class TS -->
+    <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p> <!--Angular tambem consegue resolver expressoes dentro da interpolacao-->
+    <p>Resultado de 1 + 1 não é: {{ 1 + 1 + getValor() }}</p> <!-- expressao + get criado na class TS-->
+    <p>Curso de Angular e gosto do curso: {{ cursosAngulas && getCurtirCurso() }}</p>
+    <!-- expressao + get criado na class TS-->
+  </article>
+  <article>
+    <img src="{{ urlDaImagem }}">
+    <img [src]="urlDaImagem">
+    <img bind-src="urlDaImagem">
+    <!-- por tras dos panos os colchetes sao na verdade o bing-* -->
+    <!-- quando propriedade nao existente é possível criar uma através do [attr.disable] -->
+    <!-- com colchetes na propertie src o angular faz o propertie binding
+         ,assim nao se faz necesario utilizacao de chaves
+         ex: nas tags html <p> nao tem propriedades por
+         isso se faz necessario uso de chaves -->
+
+  </article>
+</section>
