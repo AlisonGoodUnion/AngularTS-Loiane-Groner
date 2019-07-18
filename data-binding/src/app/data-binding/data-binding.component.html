@@ -1,6 +1,27 @@
 <section class="property-binding">
 
   <article>
+    <h3>Event Binding</h3>
+    <button (click)="botaoClicado()"
+            class="btn btn-info">
+      Button binding
+    </button> <!--por biaxo dos panos angular abstrai o on-click para ficar mais clean a sintaxe-->
+
+    <!-- passando $ passamos o evento como parametro-->
+    <input type="text" (keyup)="onKeyUp($event)"
+           (keyup.enter)="salvar(camponInput.value)"
+           (blur)="salvar(camponInput.value)"
+           #camponInput> <!-- referencia ao event target utilizando #-->
+    <p>Valor atual do input {{valorAtual}}</p>
+    <p>Valor atual do salvo {{valorSalvo}}</p>
+    <span (mouseover)="onMouseOverOut()"
+          (mouseout)="onMouseOverOut()"
+          [class.highlight]="isMouseOuver">passe o mouse sobre mim</span>
+
+
+  </article>
+
+  <article>
     <h3>Class Style Binding</h3>
     <div>
       Selecione uma classe:
@@ -20,10 +41,11 @@
         Texto colorido conforme valores do combo utilizando interpolação
       </div>
       <div class="alert alert-primary" role="alert"
-      [style.display]="classe.value == 'alert-primary' ? 'block' : 'none'"><!--propertie binding styleclass-->
+           [style.display]="classe.value == 'alert-primary' ? 'block' : 'none'"><!--propertie binding styleclass-->
         Texto so aparece em caso selecionado primary
       </div>
-      <div class="alert" role="alert" [class.alert-primary]="classe.value=='alert-primary'"> primary</div><!--propertie binding-->
+      <div class="alert" role="alert" [class.alert-primary]="classe.value=='alert-primary'"> primary</div>
+      <!--propertie binding-->
       <div class="alert" role="alert" [class.alert-secondary]="classe.value=='alert-secondary'"> secondary</div>
       <div class="alert" role="alert" [class.alert-success]="classe.value=='alert-success'"> success</div>
       <div class="alert" role="alert" [class.alert-danger]="classe.value=='alert-danger'"> danger</div>
