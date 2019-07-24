@@ -1,0 +1,34 @@
+<section class="two-way-binding">
+  <article>
+    <h3> Two-way data binding </h3>
+    <div>
+      <!-- input contendo associacao de propriedade e evento-->
+      <input type="text"
+             [value]="nome"
+             (input)="nome = $event.target.value"
+      />
+
+      <!--ngModel é uma representacao de campo simples ou um objeto-->
+      <input type="text"
+             [ngModel]="nome"
+             (ngModelChange)="nome = $event"
+      />
+
+      <!--Syntaxe banana na caixa [()]  -->
+      <input type="text" [(ngModel)]="nome"/>
+      <input type="text" bindon-ngModel="nome"/>
+
+    </div>
+    <p>Você digitou: {{nome}}</p>
+
+    <div>
+
+      <!--ngModel é da diretiva FormsModule.-->
+      <p>Meu nome é {{pessoa.nome}} moro em {{pessoa.endereco.nome}} tenho {{pessoa.idade}} anos.</p>
+      <input type="text" [(ngModel)]="pessoa.nome"/>
+      <input type="text" [(ngModel)]="pessoa.idade"/>
+      <input type="text" [(ngModel)]="pessoa.endereco.nome"/>
+
+    </div>
+  </article>
+</section>

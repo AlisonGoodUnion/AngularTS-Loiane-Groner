@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
   // styleUrls: ['./data-binding.component.css']
   //podemos usar direto styles sem css file!
   styles: [
-    `
+      `
       .highlight {
         background-color: brown
       }
@@ -21,6 +21,7 @@ export class DataBindingComponent implements OnInit {
   cursosAngulas: boolean = true;
   valorAtual: string;
   valorSalvo: string;
+
 
   isMouseOuver: boolean = false;
 
