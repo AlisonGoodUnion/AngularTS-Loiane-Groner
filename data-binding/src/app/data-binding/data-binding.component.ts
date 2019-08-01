@@ -27,6 +27,8 @@ export class DataBindingComponent implements OnInit {
   nomeDoCurso: string = 'Angular';
   nomeDoCurso2: string = 'Angular2';
 
+  valorInicial: number = 11;
+
   constructor() {
   }
 
@@ -57,5 +59,10 @@ export class DataBindingComponent implements OnInit {
   onMouseOverOut() {
     this.isMouseOuver = !this.isMouseOuver;
     console.log(this.isMouseOuver);
+  }
+
+  onMudouValor(evento) {
+    console.log(evento.novoValor);//podemos exibir os atributos do atributo passado como parametro, nesse caso é um number.
+    
   }
 }

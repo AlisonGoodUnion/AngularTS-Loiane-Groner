@@ -2,6 +2,10 @@
 
   <article>
     <h3>Input/Output Properties</h3>
+    <contador [valor]="valorInicial"
+              (mudouValor)="onMudouValor($event)"></contador><!--propriedade do component
+    mudouValor mas o método é do dataBinding todo click, é enviado o valor para o metodo.
+    "Evento customisado disparado pelo component filho"-->
     <app-curso [nome]="nomeDoCurso" [nomeCurso2]="nomeDoCurso2"></app-curso>
   </article>
 
