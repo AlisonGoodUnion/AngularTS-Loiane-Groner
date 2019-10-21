@@ -3,7 +3,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 @Component({
   selector: 'contador',
   templateUrl: './output-property.component.html',
-  styleUrls: ['./output-property.component.css']
+  styleUrls: ['./output-property.component.css'],
+  //outputs: ['mudouValor']
   //também podemos declarar os outputs aqui
 })
 export class OutputPropertyComponent implements OnInit {
