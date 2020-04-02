@@ -19,6 +19,9 @@ export class OutputPropertyComponent implements OnInit {
   // ElementRef tipo correto do element input
   @ViewChild('campoInput', {static: false}) campoValorInput: ElementRef;
 
+  /** acessar a variavel no html com o decorator ViewChild*/
+  @ViewChild('campoInput', {static: false}) campoValorInput: ElementRef; //ElementRef tipo correto do element input
+
   constructor() {
   }
 
