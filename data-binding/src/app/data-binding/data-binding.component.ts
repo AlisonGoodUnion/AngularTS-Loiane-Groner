@@ -4,7 +4,7 @@ import {Component, OnInit} from '@angular/core';
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
   // styleUrls: ['./data-binding.component.css']
-  //podemos usar direto styles sem css file!
+  // podemos usar direto styles sem css file!
   styles: [
       `
       .highlight {
@@ -15,19 +15,19 @@ import {Component, OnInit} from '@angular/core';
 })
 export class DataBindingComponent implements OnInit {
 
-  url: string = 'http://loiane.com'
-  urlDaImagem: string = 'http://lorempixel.com/400/200/'
+  url = 'http://loiane.com';
+  urlDaImagem = 'http://lorempixel.com/400/200/';
 
-  cursosAngulas: boolean = true;
+  cursosAngulas = true;
   valorAtual: string;
   valorSalvo: string;
 
-  isMouseOuver: boolean = false;
+  isMouseOuver = false;
 
-  nomeDoCurso: string = 'Angular';
-  nomeDoCurso2: string = 'Angular2';
+  nomeDoCurso = 'Angular';
+  nomeDoCurso2 = 'Angular2';
 
-  valorInicial: number = 11;
+  valorInicial = 11;
 
   constructor() {
   }
@@ -44,12 +44,13 @@ export class DataBindingComponent implements OnInit {
   }
 
   botaoClicado() {
-    alert("botão click event binding!");
+    alert('botão click event binding!');
   }
 
   onKeyUp(evento: KeyboardEvent) {
-    console.log((<HTMLInputElement>evento.target).value); //com o keyup tudo que é digitado é exibido no console log.
-    this.valorAtual = (<HTMLInputElement>evento.target).value;
+    const target = evento.target as HTMLInputElement;
+    console.log(target.value); // com o keyup tudo que é digitado é exibido no console log.
+    this.valorAtual = target.value;
   }
 
   salvar(value: string) {
@@ -62,7 +63,6 @@ export class DataBindingComponent implements OnInit {
   }
 
   onMudouValor(evento) {
-    console.log(evento.novoValor);//podemos exibir os atributos do atributo passado como parametro, nesse caso é um number.
-    
+    console.log(evento.novoValor); // podemos exibir os atributos do atributo passado como parametro, nesse caso é um number.
   }
 }

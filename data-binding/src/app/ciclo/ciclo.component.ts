@@ -4,7 +4,8 @@ import {
   AfterViewChecked,
   AfterViewInit,
   Component,
-  DoCheck, Input,
+  DoCheck,
+  Input,
   OnChanges,
   OnDestroy,
   OnInit,
@@ -30,12 +31,13 @@ export class CicloComponent
    * https://angular.io/guide/lifecycle-hooks
    */
 
-  @Input() valorInicial: number = 10;
+  @Input() valorInicial = 10;
+
   constructor() {
     this.log('constructor');
   }
 
-  ngOnChanges(changes: SimpleChanges): void { //before ngOnInit()
+  ngOnChanges(changes: SimpleChanges): void { // before ngOnInit()
     this.log('ngOnChanges');
   }
 

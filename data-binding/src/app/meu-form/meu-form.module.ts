@@ -1,9 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MeuFormComponent } from './meu-form.component';
-import {FormsModule} from "@angular/forms";
-
-
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {MeuFormComponent} from './meu-form.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [MeuFormComponent],
@@ -11,6 +9,7 @@ import {FormsModule} from "@angular/forms";
     CommonModule,
     FormsModule
   ],
-  exports:[MeuFormComponent]
+  exports: [MeuFormComponent]
 })
-export class MeuFormModule { }
+export class MeuFormModule {
+}

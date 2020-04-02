@@ -1,21 +1,23 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 
 @Component({
-  selector: 'contador',
+  selector: 'app-contador-component',
   templateUrl: './output-property.component.html',
   styleUrls: ['./output-property.component.css'],
-  //outputs: ['mudouValor']
-  //também podemos declarar os outputs aqui
+  // outputs: ['mudouValor']
+  // também podemos declarar os outputs aqui
 })
 export class OutputPropertyComponent implements OnInit {
 
-  //com o input podemos no data-binding component setar um valor para o contador.
-  @Input() valor: number = 0;
+  // com o input podemos no data-binding component setar um valor para o contador.
+  @Input() valor = 0;
 
-  @Output() mudouValor = new EventEmitter(); //eventEmitter utilizado para expor eventos.
+  // eventEmitter utilizado para expor eventos.
+  @Output() mudouValor = new EventEmitter();
 
-  /** acessar a variavel no html com o decorator ViewChild*/
-  @ViewChild('campoInput', {static: false}) campoValorInput: ElementRef; //ElementRef tipo correto do element input
+  /** acessar a variavel no html com o decorator ViewChild */
+  // ElementRef tipo correto do element input
+  @ViewChild('campoInput', {static: false}) campoValorInput: ElementRef;
 
   constructor() {
   }

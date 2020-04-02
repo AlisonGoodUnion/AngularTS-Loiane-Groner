@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-meu-form',
@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeuFormComponent implements OnInit {
 
-
-  nome: string = 'teste binding';
+  nome = 'teste binding';
 
   pessoa: any = {
     nome: 'Mario',
@@ -16,9 +15,10 @@ export class MeuFormComponent implements OnInit {
     endereco: {
       nome: 'Porto Alegre'
     }
-  }
+  };
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
